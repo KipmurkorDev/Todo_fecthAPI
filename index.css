@@ -1,0 +1,83 @@
+body{
+    padding: 20px;
+    background-color:#96B3A2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 50%;
+
+}
+.addtext{
+    display: flex;
+    margin-bottom:5px;
+    justify-content: space-between;
+}
+#click{
+    width: 95%;
+    height: 20px;
+    background-color: white;
+
+}
+
+.content, .complete{
+width: 50%;
+gap: 10px;
+}
+
+#complete-text, #incomplete-text{
+    display: grid;
+    padding: 5px;
+    list-style-type: none;
+    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#incomplete-text li{
+    /* background-color: #C38370; */
+    background-color: #B0A8B9;
+    padding: 5px;
+    text-align: left;
+ 
+}
+#btn{
+    background-color: rgb(38, 202, 112);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+#complete-text li{
+    background-color:#E1DCE4;
+    text-align: left;
+    padding: 5px;
+}
+.grid-1{
+    width: 100%;
+    display: flex;
+}
+h1{
+    text-align: center;
+    margin: 3px;
+    border: 1px solid oldlace;
+    background-color: #C38370;
+}
+ #incomplete-text span{
+    font-weight:700 ;
+    color: gray;
+    font-style: italic;
+}
+#complete-text span{
+    font-weight:400 ;
+    color: gray;
+    font-style: italic;
+}
+
+#complete-text p{
+font-weight: 700;
+font-style: normal;
+}
+#incomplete-text p{
+    font-weight: 700;
+    font-style: normal;
+    }
