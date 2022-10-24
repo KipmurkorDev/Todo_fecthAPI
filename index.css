@@ -17,6 +17,9 @@ body{
 #click{
     width: 95%;
     height: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
     background-color: white;
 
 }
@@ -81,3 +84,17 @@ font-style: normal;
     font-weight: 700;
     font-style: normal;
     }
+   
+@media only screen and (max-width: 600px) {
+            .grid-1 {
+ display: flex;
+ flex-direction: column;
+            }
+h1{
+text-align: center;
+width: 230px;    
+border: 1px solid oldlace;
+background-color: #C38370;
+}
+          }
+    

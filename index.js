@@ -10,7 +10,6 @@ const btn=document.getElementById("btn")
 
 let clearForm= ()=>{
     inputText.value="";
-    completed.value=false;
   }
 
 const newActivity=(el, index)=>{
@@ -40,13 +39,29 @@ const newActivity=(el, index)=>{
 
 let apiTask=[]
 
-let data = async () => {
- const response = await fetch('https://jsonplaceholder.typicode.com/todos');
- const data= await response.json();
+// let data = async () => {
+//  const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+//  const data= await response.json();
 
- localStorage.setItem('apiTask', JSON.stringify(data))
-      }
-      data()
+//  localStorage.setItem('apiTask', JSON.stringify(data))
+//       }
+//       data()
+
+
+// let newData=[]
+fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(function (response) {
+        return response.json()
+    })
+    .then((m)=>{
+        console.log(m);
+        localStorage.setItem('apiTask', JSON.stringify(m))
+
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+    // console.log(newData);
 
 apiTask = JSON.parse(localStorage.getItem("apiTask"));
 
@@ -125,7 +140,7 @@ console.log(apiTask)
 addTask()
 
 }
-
+// IIFE
 (() => {
     apiTask = JSON.parse(localStorage.getItem("apiTask"));
 
